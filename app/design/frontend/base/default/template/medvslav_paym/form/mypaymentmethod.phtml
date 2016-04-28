@@ -1,0 +1,43 @@
+<?php
+/**
+ * Medvslav_Paym extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Medvslav
+ * @package        Medvslav_Paym
+ * @copyright      Copyright (c) 2016
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+/**
+ * My Payment Method Form Fields (for checkout). 
+ * The user can enter the additional information for the Payment Gateway in these fields. 
+ * This information will be saved in the database of our Magento store
+ * 
+ * @category    Medvslav
+ * @package     Medvslav_Paym
+ * @author      Medvslav
+ */
+?>
+<div class="form-list" id="payment_form_<?php echo $this->getMethodCode() ?>" style="display:none;">
+  <div>
+    <label><?php echo $this->__('My Field One') ?>*</label>
+    <span>
+      <input type="text" title="<?php echo $this->__('My Field One') ?>" name="payment[my_field_one]" value="<?php echo $this->htmlEscape($this->getInfoData('my_field_one')) ?>" />
+    </span>
+  </div>
+  <div>
+    <label><?php echo $this->__('My Field Two') ?>*</label>
+    <span>
+      <input type="text" title="<?php echo $this->__('My Field Two') ?>" name="payment[my_field_two]" value="<?php echo $this->htmlEscape($this->getInfoData('my_field_two')) ?>" />
+    </span>
+  </div>
+</div>
+<div>
+    <?php echo $this->getMethod()->getConfigData('message');?>
+</div>
