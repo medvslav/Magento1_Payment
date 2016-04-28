@@ -15,4 +15,7 @@ The form has following fields:<br />
 - Payment from Specific countries<br />
 <br />
 After installing this module you have to activate this payment method in the configuration.<br />
+<br />
+The module uses not a real Payment Gateway for imitation.
+	
 
